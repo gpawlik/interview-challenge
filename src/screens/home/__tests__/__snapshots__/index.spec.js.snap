@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HomeScreen renders correctly 1`] = `
+<Wrapper>
+  <MenuSummary>
+    <div
+      className="container"
+    >
+      <div
+        className="row"
+      >
+        <Summary />
+      </div>
+    </div>
+  </MenuSummary>
+  <MenuBuilder
+    className="container"
+  >
+    <div
+      className="row"
+    >
+      <div
+        className="col-4"
+      >
+        <ItemPicker />
+      </div>
+      <div
+        className="col-8"
+      >
+        <h2>
+          Menu preview
+        </h2>
+        <MenuPreview />
+      </div>
+    </div>
+  </MenuBuilder>
+</Wrapper>
+`;

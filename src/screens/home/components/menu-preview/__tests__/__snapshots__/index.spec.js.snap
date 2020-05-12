@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MenuPreview renders correctly default version 1`] = `
+<Container>
+  <MenuItem
+    dietaries={Array []}
+    name="Text A"
+    onDelete={[Function]}
+  />
+  <MenuItem
+    dietaries={Array []}
+    name="Text B"
+    onDelete={[Function]}
+  />
+  <MenuItem
+    dietaries={Array []}
+    name="Text C"
+    onDelete={[Function]}
+  />
+</Container>
+`;

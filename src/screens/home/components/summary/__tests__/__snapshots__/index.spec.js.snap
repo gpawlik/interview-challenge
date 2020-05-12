@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Summary renders correctly default version 1`] = `
+Array [
+  <SummaryLeft
+    className="col-6"
+>
+    <span>
+        5 items
+    </span>
+</SummaryLeft>,
+  <SummaryRight
+    className="col-6"
+>
+    <span>
+        2
+        x 
+        <Badge
+            text="aa"
+        />
+    </span>
+    <span>
+        3
+        x 
+        <Badge
+            text="bb"
+        />
+    </span>
+    <span>
+        1
+        x 
+        <Badge
+            text="cc"
+        />
+    </span>
+</SummaryRight>,
+]
+`;

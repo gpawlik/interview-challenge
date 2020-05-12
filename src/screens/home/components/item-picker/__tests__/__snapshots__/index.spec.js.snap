@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ItemPicker renders correctly default version 1`] = `
+<Container>
+  <MenuItem
+    dietaries={Array []}
+    name="Text A"
+    onPress={[Function]}
+  />
+  <MenuItem
+    dietaries={Array []}
+    name="Text B"
+    onPress={[Function]}
+  />
+</Container>
+`;

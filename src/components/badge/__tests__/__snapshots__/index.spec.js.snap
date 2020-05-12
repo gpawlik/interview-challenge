@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Badge renders correctly default version 1`] = `
+<Container>
+  Hello World
+</Container>
+`;
+
+exports[`Badge renders correctly with no text 1`] = `
+<Container>
+  
+</Container>
+`;

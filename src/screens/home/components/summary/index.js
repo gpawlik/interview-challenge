@@ -21,9 +21,9 @@ export const Summary = () => {
       </SummaryLeft>
       <SummaryRight className="col-6">
         {summmary.map(({ label, count }) => (
-          <React.Fragment>
+          <span key={label}>
             {count}x <Badge text={label} />
-          </React.Fragment>
+          </span>
         ))}
       </SummaryRight>
     </React.Fragment>

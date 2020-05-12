@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MenuItem renders correctly default version 1`] = `
+<Container
+  onClick={[Function]}
+>
+  <Title>
+    Item 123
+  </Title>
+  <InfoRow>
+    <div
+      className="sc-bdVaJa RUiaz"
+    >
+      ab
+    </div>
+    <div
+      className="sc-bdVaJa RUiaz"
+    >
+      cd
+    </div>
+    <div
+      className="sc-bdVaJa RUiaz"
+    >
+      ef
+    </div>
+  </InfoRow>
+</Container>
+`;
+
+exports[`MenuItem renders correctly with delete button 1`] = `
+<Container
+  onClick={[Function]}
+>
+  <Title>
+    Item 123
+  </Title>
+  <InfoRow>
+    <div
+      className="sc-bdVaJa RUiaz"
+    >
+      ab
+    </div>
+    <div
+      className="sc-bdVaJa RUiaz"
+    >
+      cd
+    </div>
+    <div
+      className="sc-bdVaJa RUiaz"
+    >
+      ef
+    </div>
+  </InfoRow>
+  <RemoveButton
+    onClick={[Function]}
+  >
+    x
+  </RemoveButton>
+</Container>
+`;
