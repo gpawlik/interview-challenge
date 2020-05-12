@@ -1,15 +1,38 @@
 import * as React from "react";
+import { useDispatch, useSelector } from "react-redux";
 
-export const MenuPreview = () => (
-  <ul className="menu-preview">
-    {/* <li className="item">
-  <h2>Dummy item</h2>
-  <p>
-    <span className="dietary">ve</span>
-    <span className="dietary">v</span>
-    <span className="dietary">n!</span>
-  </p>
-  <button className="remove-item">x</button>
-</li> */}
-  </ul>
-);
+import { getSelectedItems } from "../../../../state/menu/selectors";
+import { removeItem } from "../../../../state/menu/actions";
+
+export const MenuPreview = () => {
+  const dispatch = useDispatch();
+  const items = useSelector(getSelectedItems);
+
+  const removeItemFromMenu = React.useCallback(
+    (id) => dispatch(removeItem(id)),
+    [dispatch]
+  );
+
+  return (
+    <ul className="menu-preview">
+      {items.map(({ id, name, dietaries = [] }) => (
+        <li key={id} className="item">
+          <h2>{name}</h2>
+          <p>
+            {dietaries.map((item, index) => (
+              <span key={`${item}-index`} className="dietary">
+                {item}
+              </span>
+            ))}
+          </p>
+          <button
+            className="remove-item"
+            onClick={() => removeItemFromMenu(id)}
+          >
+            x
+          </button>
+        </li>
+      ))}
+    </ul>
+  );
+};
