@@ -4,6 +4,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { getSelectedItems } from "../../../../state/menu/selectors";
 import { removeItem } from "../../../../state/menu/actions";
 
+import { Badge } from "../../../../components/badge";
+
 export const MenuPreview = () => {
   const dispatch = useDispatch();
   const items = useSelector(getSelectedItems);
@@ -15,14 +17,12 @@ export const MenuPreview = () => {
 
   return (
     <ul className="menu-preview">
-      {items.map(({ id, name, dietaries = [] }) => (
+      {items.map(({ id, name, dietaries = [] }, index) => (
         <li key={id} className="item">
           <h2>{name}</h2>
           <p>
             {dietaries.map((item, index) => (
-              <span key={`${item}-index`} className="dietary">
-                {item}
-              </span>
+              <Badge key={`${item}-index`} text={item} />
             ))}
           </p>
           <button

@@ -11,9 +11,12 @@ export const menu = (state = initialState, action) => {
   switch (action.type) {
     case ADD_ITEM: {
       const { payload } = action;
+      const currentlySelected = state.selected;
       return {
         ...state,
-        selected: [...state.selected, payload],
+        selected: currentlySelected.includes(payload)
+          ? currentlySelected
+          : [...currentlySelected, payload],
       };
     }
 

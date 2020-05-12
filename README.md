@@ -14,3 +14,5 @@ Good luck!
 
 1. Create a basic folder structure for `screens`, `components` and `state`
 
+2. Items from `ItemPicker` and `MenuPreview` could potentially be defined as samme component
+

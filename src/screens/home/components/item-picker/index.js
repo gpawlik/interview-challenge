@@ -4,6 +4,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { getAvailableItems } from "../../../../state/menu/selectors";
 import { addItem } from "../../../../state/menu/actions";
 
+import { Badge } from "../../../../components/badge";
+
 export const ItemPicker = () => {
   const dispatch = useDispatch();
   const items = useSelector(getAvailableItems);
@@ -19,9 +21,7 @@ export const ItemPicker = () => {
           <h2>{name}</h2>
           <p>
             {dietaries.map((item, index) => (
-              <span key={`${item}-index`} className="dietary">
-                {item}
-              </span>
+              <Badge key={`${item}-index`} text={item} />
             ))}
           </p>
         </li>

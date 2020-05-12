@@ -1,14 +1,29 @@
 import * as React from "react";
+import { useSelector } from "react-redux";
 
-export const Summary = () => (
-  <React.Fragment>
-    <div className="col-6 menu-summary-left">
-      <span>5 items</span>
-    </div>
-    <div className="col-6 menu-summary-right">
-      6x <span className="dietary">ve</span>
-      4x <span className="dietary">v</span>
-      12x <span className="dietary">n!</span>
-    </div>
-  </React.Fragment>
-);
+import {
+  getSelectedItemsCount,
+  getSummaryArray,
+} from "../../../../state/menu/selectors";
+import { Badge } from "../../../../components/badge";
+
+export const Summary = () => {
+  const numberOfItems = useSelector(getSelectedItemsCount);
+  const summmary = useSelector(getSummaryArray);
+  const numberOfItemsText = numberOfItems === 1 ? "item" : "items";
+
+  return (
+    <React.Fragment>
+      <div className="col-6 menu-summary-left">
+        <span>{`${numberOfItems} ${numberOfItemsText}`}</span>
+      </div>
+      <div className="col-6 menu-summary-right">
+        {summmary.map(({ label, count }) => (
+          <React.Fragment>
+            {count}x <Badge text={label} />
+          </React.Fragment>
+        ))}
+      </div>
+    </React.Fragment>
+  );
+};
