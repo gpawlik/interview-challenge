@@ -9,3 +9,8 @@ Please read `README-FRONTEND.md` for further instructions.
 If you have any questions or would like to clarify any details, please email lyz@feedr.co.
 
 Good luck!
+
+### Notes
+
+1. Create a basic folder structure for `screens`, `components` and `state`
+
