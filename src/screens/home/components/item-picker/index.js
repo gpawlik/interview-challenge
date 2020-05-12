@@ -4,7 +4,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { getAvailableItems } from "../../../../state/menu/selectors";
 import { addItem } from "../../../../state/menu/actions";
 
-import { Badge } from "../../../../components/badge";
+import { MenuItem } from "../../../../components/menu-item";
+import { Container } from "./styles";
 
 export const ItemPicker = () => {
   const dispatch = useDispatch();
@@ -15,17 +16,15 @@ export const ItemPicker = () => {
   ]);
 
   return (
-    <ul className="item-picker">
+    <Container>
       {items.map(({ id, name, dietaries = [] }) => (
-        <li key={id} className="item" onClick={() => addItemToMenu(id)}>
-          <h2>{name}</h2>
-          <p>
-            {dietaries.map((item, index) => (
-              <Badge key={`${item}-index`} text={item} />
-            ))}
-          </p>
-        </li>
+        <MenuItem
+          key={id}
+          name={name}
+          dietaries={dietaries}
+          onPress={() => addItemToMenu(id)}
+        />
       ))}
-    </ul>
+    </Container>
   );
 };

@@ -4,16 +4,18 @@ import { ItemPicker } from "./components/item-picker";
 import { MenuPreview } from "./components/menu-preview";
 import { Summary } from "./components/summary";
 
+import { Wrapper, MenuSummary, MenuBuilder } from "./styles";
+
 export const HomeScreen = () => (
-  <div className="wrapper">
-    <div className="menu-summary">
+  <Wrapper>
+    <MenuSummary>
       <div className="container">
         <div className="row">
           <Summary />
         </div>
       </div>
-    </div>
-    <div className="container menu-builder">
+    </MenuSummary>
+    <MenuBuilder className="container">
       <div className="row">
         <div className="col-4">
           <ItemPicker />
@@ -23,6 +25,6 @@ export const HomeScreen = () => (
           <MenuPreview />
         </div>
       </div>
-    </div>
-  </div>
+    </MenuBuilder>
+  </Wrapper>
 );

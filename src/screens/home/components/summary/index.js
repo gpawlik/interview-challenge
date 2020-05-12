@@ -7,6 +7,8 @@ import {
 } from "../../../../state/menu/selectors";
 import { Badge } from "../../../../components/badge";
 
+import { SummaryLeft, SummaryRight } from "./styles";
+
 export const Summary = () => {
   const numberOfItems = useSelector(getSelectedItemsCount);
   const summmary = useSelector(getSummaryArray);
@@ -14,16 +16,16 @@ export const Summary = () => {
 
   return (
     <React.Fragment>
-      <div className="col-6 menu-summary-left">
+      <SummaryLeft className="col-6">
         <span>{`${numberOfItems} ${numberOfItemsText}`}</span>
-      </div>
-      <div className="col-6 menu-summary-right">
+      </SummaryLeft>
+      <SummaryRight className="col-6">
         {summmary.map(({ label, count }) => (
           <React.Fragment>
             {count}x <Badge text={label} />
           </React.Fragment>
         ))}
-      </div>
+      </SummaryRight>
     </React.Fragment>
   );
 };

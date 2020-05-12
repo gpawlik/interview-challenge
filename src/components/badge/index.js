@@ -1,3 +1,5 @@
 import * as React from "react";
 
-export const Badge = ({ text }) => <span className="dietary">{text}</span>;
+import { Container } from "./styles";
+
+export const Badge = ({ text }) => <Container>{text}</Container>;
