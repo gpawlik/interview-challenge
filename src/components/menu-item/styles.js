@@ -7,6 +7,7 @@ export const Container = styled.li`
   padding: 10px;
   margin-bottom: 20px;
   position: relative;
+  cursor: pointer;
 `;
 
 export const Title = styled.h2`

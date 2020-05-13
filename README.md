@@ -28,5 +28,7 @@ Good luck!
 
 ### Demo
 
+Online: http://feedr.gpawlik.com/
 
+![Functionality demo](/demo.gif)
 
