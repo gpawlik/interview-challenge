@@ -14,5 +14,19 @@ Good luck!
 
 1. Create a basic folder structure for `screens`, `components` and `state`
 
-2. Items from `ItemPicker` and `MenuPreview` could potentially be defined as samme component
+2. Items from `ItemPicker` and `MenuPreview` could potentially be defined as different components
+
+3. `App.css` has been split into respective `styled-components`
+
+4. `redux-persist` has been used to keep the state after refresh
+
+5. If config changes were allowed, I would implement path aliases for convenience
+
+6. Tests has been written for all the components, reducer and selectors
+
+7. For the production-ready application I would also consider design and translations system and introduce types
+
+### Demo
+
+
 

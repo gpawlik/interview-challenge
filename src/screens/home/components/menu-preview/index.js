@@ -16,6 +16,10 @@ export const MenuPreview = () => {
     [dispatch]
   );
 
+  if (!items.length) {
+    return <p>Menu is empty. Please select items from the left-hand menu.</p>;
+  }
+
   return (
     <Container>
       {items.map(({ id, name, dietaries = [] }) => (
